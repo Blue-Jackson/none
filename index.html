@@ -1,0 +1,69 @@
+import React from 'react';
+
+const HTMLPreview = () => {
+  const htmlContent = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Basic HTML Site</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+            }
+            header {
+                background-color: #f4f4f4;
+                padding: 1rem;
+                text-align: center;
+            }
+            main {
+                padding: 1rem;
+            }
+            footer {
+                background-color: #f4f4f4;
+                padding: 1rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to My Basic HTML Site</h1>
+        </header>
+        
+        <main>
+            <h2>About</h2>
+            <p>This is a simple HTML website. You can add more content here.</p>
+            
+            <h2>Contact</h2>
+            <p>Email: example@example.com</p>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 My Basic HTML Site. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
+  `;
+
+  return (
+    <div>
+      <h2>HTML Preview:</h2>
+      <iframe
+        title="HTML Preview"
+        srcDoc={htmlContent}
+        style={{
+          width: '100%',
+          height: '500px',
+          border: '1px solid #ccc',
+        }}
+      />
+    </div>
+  );
+};
+
+export default HTMLPreview;
